@@ -1,0 +1,799 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+
+\series bold
+Principles of Programming Languages
+\begin_inset Newline newline
+\end_inset
+
+CECS 342 - Section 5
+\begin_inset Newline newline
+\end_inset
+
+Fall 2021
+\end_layout
+
+\begin_layout Paragraph*
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Course Lecture (10559)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tu Th 9:30 AM - 10:45 AM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zoom
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Instructor
+\series default
+: Anthony Giacalon
+\series bold
+e
+\begin_inset space \hfill{}
+\end_inset
+
+Email
+\series default
+: anthony.giacalone@csulb.edu
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+Office: ECS-503
+\begin_inset space \hfill{}
+\end_inset
+
+Hours: MoTuWeTh 1 PM-2 PM
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Required Textbook.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Programming Language Pragmatics
+\emph default
+, 4th edition, by Michael L.
+ Scott
+\end_layout
+
+\begin_layout Paragraph*
+Catalog Description.
+\end_layout
+
+\begin_layout Standard
+Prerequisite: CECS 328 with a grade of “C” or better.
+ Fundamental topics in the design and implementation of programming languages.
+ Programing language paradigms.
+ Comparison of languages in type systems, data types, control flow, subroutines,
+ concurrency, and exception handling.
+\end_layout
+
+\begin_layout Paragraph*
+Course Goals.
+ 
+\end_layout
+
+\begin_layout Standard
+By the conclusion of this course, students will be able to: 
+\end_layout
+
+\begin_layout Itemize
+Understand the differences between various programming language paradigms
+\end_layout
+
+\begin_layout Itemize
+Apply problem solving skills to understand the differences between programming
+ languages
+\end_layout
+
+\begin_layout Itemize
+Understand how and why programming languages are designed and the challenges
+ presented to language designers
+\end_layout
+
+\begin_layout Itemize
+Have a basic understanding of functional and logic based programming
+\end_layout
+
+\begin_layout Itemize
+Have knowledge about programming language concepts like binding time, higher-ord
+er functions, and recursion
+\end_layout
+
+\begin_layout Itemize
+Be able to rapidly learn new programming languages using the knowledge gained
+ in this course
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="5">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grading
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grade Scale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Homework and Labs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+90% or above
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exams and Quizzes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80% - 89%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Final Exam
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70% - 79%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60% - 69%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+59% or lower
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Exams.
+\end_layout
+
+\begin_layout Standard
+Students will take two midterm exams throughout the semester.
+ There will be no makeups allowed for any quiz or exam.
+ A final exam is administered at the conclusion of the semester.
+ There may be some writing on the quizzes and exams.
+\end_layout
+
+\begin_layout Paragraph
+Attendance.
+\end_layout
+
+\begin_layout Standard
+Attendance in this course is mandatory, as all material presented during
+ lecture or lab is fair game for exam questions or homework.
+ Students are responsible for notifying the instructor about any extended
+ leave of absences.
+ There will be no makeups for assignments, quizzes, or exams that are missed
+ due to an unexcused absence.
+\end_layout
+
+\begin_layout Paragraph
+Class Rules.
+\end_layout
+
+\begin_layout Standard
+Homework and lab assignments will be assigned approximately every other
+ week, and will mostly involve written work and coding.
+\end_layout
+
+\begin_layout Itemize
+Homework and lab assignments are 
+\series bold
+due on the date and time indicated on the assignment sheet and Beachboard
+ Dropbox
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Homework may include writing code, doing research, essay writing, debugging
+ programs, and other disciplines.
+\end_layout
+
+\begin_layout Itemize
+Lab assignments will be coding exercises designed to practice the concepts
+ discussed in lecture.
+\end_layout
+
+\begin_layout Itemize
+You are welcome to work on homework and lab assignments at home, but assistance
+ will only be provided during lab time and office hours.
+\end_layout
+
+\begin_layout Itemize
+Labs will be graded on correct answers to required deliverables and/or the
+ completeness of the assignment.
+ Incomplete assignments may receive partial or no credit at the discretion
+ of the instructor.
+\end_layout
+
+\begin_layout Itemize
+Students will be expected to read selections from the textbook for every
+ lecture session.
+ These readings should be done before class so that we can have a discussion
+ on the topics during the lecture.
+\end_layout
+
+\begin_layout Itemize
+During exams, there will be 
+\emph on
+no bathroom breaks
+\emph default
+.
+ Please be sure to use the restroom prior to the start of the exam.
+ If a student leaves the classroom before the exam has been concluded, that
+ student forfeits the completion of the rest of their exam.
+\end_layout
+
+\begin_layout Itemize
+All source code submitted must be adequately commented in order to receive
+ credit.
+ Source code which is not commented with the student's own comments 
+\emph on
+will not receive any credit
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Late assignments
+\series default
+ will, at a minimum, be subject to a 10% reduction in grade 
+\emph on
+per day
+\emph default
+ that the assignment is late.
+ I do not accept homework submissions via email, fax, or any other means
+ than the deliverable requirements listed on the assignment sheet.
+\end_layout
+
+\begin_layout Paragraph*
+Computer Software.
+\end_layout
+
+\begin_layout Standard
+You will be responsible for finding and installing any software needed to
+ complete the programming assignments for this course.
+ While it is not strictly required, 
+\emph on
+I highly recommend either installing a Linux operating system on your computer
+ or running a virtual machine with Linux as the OS
+\emph default
+.
+ This course can be completed in its entirety using free, open-source software.
+\end_layout
+
+\begin_layout Paragraph*
+Academic Honesty.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Cheating
+\series default
+ and 
+\series bold
+plagiarism
+\series default
+ will not be tolerated in this course.
+ Any individual caught cheating on quizzes, homework, lab projects, or the
+ final exam will be punished to the full extent allowed under University
+ regulations.
+ 
+\series bold
+Anything with your name on it must be written by you
+\series default
+.
+ Plagiarism on papers or assignments is not acceptable and work that is
+ plagiarized will not receive credit.
+ Plagiarism is considered cheating.
+ Note: any time another person’s work is used without giving them proper
+ credit, it is considered plagiarism and cheating.
+\emph on
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+At a minimum
+\emph default
+, any student caught cheating will receive no credit for the work concerned
+ and will receive a reduction of one letter grade from their final course
+ grade.
+ The official CSULB Policy on Cheating and Plagiarism can be found here:
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://web.csulb.edu/divisions/aa/catalog/current/academic_information/cheating_pl
+agiarism.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Withdrawal Policy.
+\end_layout
+
+\begin_layout Standard
+Students may request a withdrawal from the instructor as long as the request
+ meets the requirements of the University and no more than one of the assigned
+ midterm exams has been given to the class.
+ Request for withdrawal from the course involving extenuating circumstances
+ will be evaluated on a case-by-case basis at the discretion of the instructor.
+\end_layout
+
+\begin_layout Paragraph*
+COE Tutoring Services Available for Major Classes.
+\end_layout
+
+\begin_layout Standard
+The College of Engineering Tutoring Center offers free tutoring for many
+ lower and upper division engineering courses in MAE, CECS, CECEM, CHE and
+ EE.
+ Tutors are available Monday through Friday during the fall and spring semesters
+ between the hours of 9:00am-6:00pm in EN2-300.
+ Visit the following website for detailed tutoring schedules: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://web.csulb.edu/colleges/coe/views/essc/academic_success/ engineering_tutor.sh
+tml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Accommodations for Disability.
+\end_layout
+
+\begin_layout Standard
+Students with a disability or medical restriction who are requesting a classroom
+ accommodation should contact the Bob Murphy Access Center (BMAC) at 562-985-540
+1 or visit SCC, room 110 during 8AM-5PM weekday hours. BMAC will work with
+ the student to identify a reasonable accommodation in partnership with
+ appropriate academic offices and medical providers.
+ 
+\series bold
+We encourage students to reach out to BMAC as soon as possible
+\series default
+.
+\end_layout
+
+\begin_layout Paragraph*
+Accommodations for Food and Housing.
+\end_layout
+
+\begin_layout Standard
+Any student who is facing academic or personal challenges due to difficulty
+ in affording groceries/food and/or lacking a safe and stable living environment
+ is urged to contact the CSULB Student Emergency Intervention & Wellness
+ Program.
+ The website outlining the resources available is 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.csulb.edu/basicneeds
+\end_layout
+
+\end_inset
+
+.
+ Students can also email supportingstudents@csulb.edu or call 562-985-2038.
+ If comfortable, students may reach out to the professor as they may be
+ able to identify additional resources.
+\end_layout
+
+\end_body
+\end_document

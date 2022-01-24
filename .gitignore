@@ -1,6 +1,11 @@
 # MacOS Stuff
 .DS_Store
 
+*.idea/
+*.idea/*
+.idea/
+.idea
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
